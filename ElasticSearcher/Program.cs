@@ -2,6 +2,7 @@
 using Elasticsearch.Net.Connection;
 using Elasticsearch.Net.ConnectionPool;
 using ElasticSearcher.ElasticUtils;
+using ElasticSearcher.Models;
 using ElasticSearcher.Searches;
 using Nest;
 
@@ -25,7 +26,7 @@ namespace ElasticSearcher
 
             if (id != 0)
             {
-                personSearcher.GetItem(id);
+                personSearcher.GetItem<Person>(id);
             }
             else
             {

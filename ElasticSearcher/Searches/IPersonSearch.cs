@@ -4,6 +4,6 @@ namespace ElasticSearcher.Searches
 {
     public interface IPersonSearch
     {
-        Person GetItem(int id);
+        T GetItem<T>(int id) where T : class;
     }
 }
